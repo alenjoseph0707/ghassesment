@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Archive</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .blog-post {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .blog-post:hover {
+            transform: scale(1.05);
+        }
+        .blog-post img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .post-content {
+            padding: 15px;
+        }
+        .post-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Blog Archive</h1>
+    <div class="blog-grid">
+        <article class="blog-post">
+            <a href="#">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Post Image">
+                <div class="post-content">
+                    <h2 class="post-title">Blog Post 1</h2>
+                    <p>Short description of the blog post...</p>
+                </div>
+            </a>
+        </article>
+
+        <article class="blog-post">
+            <a href="#">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Post Image">
+                <div class="post-content">
+                    <h2 class="post-title">Blog Post 2</h2>
+                    <p>Short description of the blog post...</p>
+                </div>
+            </a>
+        </article>
+
+        <article class="blog-post">
+            <a href="#">
+                <img src="https://randomuser.me/api/portraits/women/46.jpg" alt="Post Image">
+                <div class="post-content">
+                    <h2 class="post-title">Blog Post 3</h2>
+                    <p>Short description of the blog post...</p>
+                </div>
+            </a>
+        </article>
+    </div>
+</div>
+
+</body>
+</html>
